@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <header><h1>TaskFlow</h1><button id="logout" class="hidden">Шығу</button></header>
+  <main>
+    <section id="auth">
+      <h2>Кіру / Тіркелу</h2>
+      <input id="email" type="text" placeholder="Email">
+      <input id="password" type="password" placeholder="Пароль (8-20 таңба)">
+      <div class="row"><button id="btn-login">Кіру</button><button id="btn-register" class="secondary">Тіркелу</button></div>
+      <p id="auth-msg" class="msg"></p>
+    </section>
+
+    <section id="app" class="hidden">
+      <h2>Жаңа тапсырма</h2>
+      <div class="grid">
+        <input id="t-title" placeholder="Атауы (1-100 таңба)">
+        <input id="t-desc" placeholder="Сипаттамасы">
+        <select id="t-cat"><option>General</option><option>Study</option><option>Work</option><option>Personal</option></select>
+        <input id="t-due" type="text" placeholder="Мерзімі (YYYY-MM-DD)">
+        <button id="btn-add">Қосу</button>
+      </div>
+      <p id="app-msg" class="msg"></p>
+
+      <h2>Тапсырмалар</h2>
+      <div class="row">
+        <select id="f-status"><option value="">Барлық күй</option><option value="new">Жаңа</option><option value="progress">Орындалуда</option><option value="done">Орындалды</option></select>
+        <input id="f-search" placeholder="Атауы бойынша іздеу">
+      </div>
+      <ul id="list"></ul>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

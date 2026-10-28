@@ -1,0 +1,7 @@
+node_modules/
+logs/
+jmeter/results/
+jmeter/report/
+*.jtl
+jmeter.log
+.DS_Store
